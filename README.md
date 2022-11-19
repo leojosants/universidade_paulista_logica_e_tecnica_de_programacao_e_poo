@@ -1,2 +1,4 @@
-# Analise e Desenvolvimento de Sistemas UNIP
- Práticas, questionários, exercícios
+# Análise e Desenvolvimento de Sistemas UNIP
+ 
+ - Disciplina Lógica e Técnicas de Programação
+ 
