@@ -1,0 +1,15 @@
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_3\ExemploRobos\bin\Debug\net7.0\ExemploRobos.exe
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_3\ExemploRobos\bin\Debug\net7.0\ExemploRobos.deps.json
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_3\ExemploRobos\bin\Debug\net7.0\ExemploRobos.runtimeconfig.json
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_3\ExemploRobos\bin\Debug\net7.0\ExemploRobos.dll
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_3\ExemploRobos\bin\Debug\net7.0\ExemploRobos.pdb
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_3\ExemploRobos\obj\Debug\net7.0\ExemploRobos.csproj.AssemblyReference.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_3\ExemploRobos\obj\Debug\net7.0\ExemploRobos.GeneratedMSBuildEditorConfig.editorconfig
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_3\ExemploRobos\obj\Debug\net7.0\ExemploRobos.AssemblyInfoInputs.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_3\ExemploRobos\obj\Debug\net7.0\ExemploRobos.AssemblyInfo.cs
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_3\ExemploRobos\obj\Debug\net7.0\ExemploRobos.csproj.CoreCompileInputs.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_3\ExemploRobos\obj\Debug\net7.0\ExemploRobos.dll
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_3\ExemploRobos\obj\Debug\net7.0\refint\ExemploRobos.dll
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_3\ExemploRobos\obj\Debug\net7.0\ExemploRobos.pdb
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_3\ExemploRobos\obj\Debug\net7.0\ExemploRobos.genruntimeconfig.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_3\ExemploRobos\obj\Debug\net7.0\ref\ExemploRobos.dll
