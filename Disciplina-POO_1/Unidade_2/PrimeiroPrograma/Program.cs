@@ -1,4 +1,5 @@
-﻿namespace PrimeiroPrograma
+﻿
+namespace PrimeiroPrograma
 {
     class Program
     {
