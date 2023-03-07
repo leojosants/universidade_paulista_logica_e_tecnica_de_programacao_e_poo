@@ -1,0 +1,15 @@
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Matrizes\bin\Debug\net7.0\Matrizes.exe
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Matrizes\bin\Debug\net7.0\Matrizes.deps.json
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Matrizes\bin\Debug\net7.0\Matrizes.runtimeconfig.json
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Matrizes\bin\Debug\net7.0\Matrizes.dll
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Matrizes\bin\Debug\net7.0\Matrizes.pdb
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Matrizes\obj\Debug\net7.0\Matrizes.csproj.AssemblyReference.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Matrizes\obj\Debug\net7.0\Matrizes.GeneratedMSBuildEditorConfig.editorconfig
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Matrizes\obj\Debug\net7.0\Matrizes.AssemblyInfoInputs.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Matrizes\obj\Debug\net7.0\Matrizes.AssemblyInfo.cs
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Matrizes\obj\Debug\net7.0\Matrizes.csproj.CoreCompileInputs.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Matrizes\obj\Debug\net7.0\Matrizes.dll
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Matrizes\obj\Debug\net7.0\refint\Matrizes.dll
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Matrizes\obj\Debug\net7.0\Matrizes.pdb
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Matrizes\obj\Debug\net7.0\Matrizes.genruntimeconfig.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Matrizes\obj\Debug\net7.0\ref\Matrizes.dll
