@@ -1,0 +1,15 @@
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Atividade_Teleaula\Pergunta1\bin\Debug\net7.0\Pergunta1.exe
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Atividade_Teleaula\Pergunta1\bin\Debug\net7.0\Pergunta1.deps.json
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Atividade_Teleaula\Pergunta1\bin\Debug\net7.0\Pergunta1.runtimeconfig.json
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Atividade_Teleaula\Pergunta1\bin\Debug\net7.0\Pergunta1.dll
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Atividade_Teleaula\Pergunta1\bin\Debug\net7.0\Pergunta1.pdb
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Atividade_Teleaula\Pergunta1\obj\Debug\net7.0\Pergunta1.csproj.AssemblyReference.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Atividade_Teleaula\Pergunta1\obj\Debug\net7.0\Pergunta1.GeneratedMSBuildEditorConfig.editorconfig
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Atividade_Teleaula\Pergunta1\obj\Debug\net7.0\Pergunta1.AssemblyInfoInputs.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Atividade_Teleaula\Pergunta1\obj\Debug\net7.0\Pergunta1.AssemblyInfo.cs
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Atividade_Teleaula\Pergunta1\obj\Debug\net7.0\Pergunta1.csproj.CoreCompileInputs.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Atividade_Teleaula\Pergunta1\obj\Debug\net7.0\Pergunta1.dll
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Atividade_Teleaula\Pergunta1\obj\Debug\net7.0\refint\Pergunta1.dll
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Atividade_Teleaula\Pergunta1\obj\Debug\net7.0\Pergunta1.pdb
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Atividade_Teleaula\Pergunta1\obj\Debug\net7.0\Pergunta1.genruntimeconfig.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\Atividade_Teleaula\Pergunta1\obj\Debug\net7.0\ref\Pergunta1.dll
