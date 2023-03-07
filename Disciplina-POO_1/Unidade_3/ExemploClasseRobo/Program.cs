@@ -1,5 +1,5 @@
 ﻿
-namespace ExemploRobos
+namespace ExemploClasseRobo
 {
 
     class Robo
