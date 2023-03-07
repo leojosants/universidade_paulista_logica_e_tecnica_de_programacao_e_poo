@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "LacoDeRepeticaoFOR/1.0.0": {
+        "runtime": {
+          "LacoDeRepeticaoFOR.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LacoDeRepeticaoFOR/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
