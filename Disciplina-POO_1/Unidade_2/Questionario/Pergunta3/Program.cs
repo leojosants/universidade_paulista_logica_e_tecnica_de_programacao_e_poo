@@ -1,5 +1,5 @@
 ﻿
-namespace Pergunta2
+namespace Pergunta3
 {
 
     class Program
@@ -9,10 +9,10 @@ namespace Pergunta2
         {
 
             bool primeiro = 7 > 5 && 7 % 5 == 1;
-            bool segumdo = 4 * 3 != 10 && !(3 > 3);
+            bool segundo = 4 * 3 != 10 && !(3 > 3);
 
             Console.WriteLine(primeiro);
-            Console.WriteLine(segumdo);
+            Console.WriteLine(segundo);
 
         }
 
