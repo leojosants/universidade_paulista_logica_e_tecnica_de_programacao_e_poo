@@ -1,0 +1,15 @@
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\ProgramaTexto\bin\Debug\net7.0\ProgramaTexto.exe
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\ProgramaTexto\bin\Debug\net7.0\ProgramaTexto.deps.json
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\ProgramaTexto\bin\Debug\net7.0\ProgramaTexto.runtimeconfig.json
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\ProgramaTexto\bin\Debug\net7.0\ProgramaTexto.dll
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\ProgramaTexto\bin\Debug\net7.0\ProgramaTexto.pdb
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\ProgramaTexto\obj\Debug\net7.0\ProgramaTexto.csproj.AssemblyReference.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\ProgramaTexto\obj\Debug\net7.0\ProgramaTexto.GeneratedMSBuildEditorConfig.editorconfig
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\ProgramaTexto\obj\Debug\net7.0\ProgramaTexto.AssemblyInfoInputs.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\ProgramaTexto\obj\Debug\net7.0\ProgramaTexto.AssemblyInfo.cs
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\ProgramaTexto\obj\Debug\net7.0\ProgramaTexto.csproj.CoreCompileInputs.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\ProgramaTexto\obj\Debug\net7.0\ProgramaTexto.dll
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\ProgramaTexto\obj\Debug\net7.0\refint\ProgramaTexto.dll
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\ProgramaTexto\obj\Debug\net7.0\ProgramaTexto.pdb
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\ProgramaTexto\obj\Debug\net7.0\ProgramaTexto.genruntimeconfig.cache
+C:\REPOSITORIO_GITHUB_DESKTOP\Analise_e_Desenvolvimento_de_Sistemas_UNIP\Disciplina-POO_1\Unidade_2\ProgramaTexto\obj\Debug\net7.0\ref\ProgramaTexto.dll
