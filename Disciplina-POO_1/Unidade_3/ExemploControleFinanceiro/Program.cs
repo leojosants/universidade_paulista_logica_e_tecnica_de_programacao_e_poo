@@ -3,11 +3,23 @@ namespace ExemploControleFinanceiro
 {
     class Conta
     {
-        // Atributos
-        public string nome;
+        // Atributo, get e set (nome)
+        private String nome;
+        public string Nome
+        {
+            set
+            {
+                nome = value;
+            }
+            get
+            {
+                return nome;
+            }
+        }
+
         public double valor;
-        public string dataDeVencimento;
-        public string dataDePagamento;
+        public String dataDeVencimento;
+        public String dataDePagamento;
 
         // Método construtor
         public Conta()
@@ -21,6 +33,7 @@ namespace ExemploControleFinanceiro
         // Método construtor - sobrecarga
         public Conta(string fNome, double fValor)
         {
+            // Comandos de iniciação
             this.nome = fNome;
             this.valor = fValor;
         }
@@ -35,17 +48,36 @@ namespace ExemploControleFinanceiro
             return this.nome;
         }
 
-        public void DefineSaldo(double valor)
+        public double DefineSaldo(double valor)
         {
             this.valor = valor;
+            return this.RetornarSaldo();
         }
     }
 
     class Categoria
     {
-        // Atributos
+        // Atributo, get e set (nome)
         public String nome;
+        public String GetNome()
+        {
+            return nome;
+        }
+        public void SetNome(String nome)
+        {
+            this.nome = nome;
+        }
+
+        // Atributo, get e set (tipo)
         public String tipo;
+        public String GetTipo()
+        {
+            return tipo;
+        }
+        public void SetTipo(String tipo)
+        {
+            this.tipo = tipo;
+        }
 
         // Método construtor
         public Categoria()
@@ -78,6 +110,16 @@ namespace ExemploControleFinanceiro
         {
             this.nome = fNome;
         }
+
+        // get e set
+        public String GetNome()
+        {
+            return nome;
+        }
+        public void SetNome(String nome)
+        {
+            this.nome = nome;
+        }
     }
 
     class Caixa
@@ -98,6 +140,25 @@ namespace ExemploControleFinanceiro
         {
             this.nome = fNome;
             this.saldo = fSaldo;
+        }
+
+        // get e set
+        public String GetNome()
+        {
+            return nome;
+        }
+        public void SetNome(String nome)
+        {
+            this.nome = nome;
+        }
+
+        public double GetSaldo()
+        {
+            return saldo;
+        }
+        public void SetSaldo(double saldo)
+        {
+            this.saldo = saldo;
         }
     }
 
