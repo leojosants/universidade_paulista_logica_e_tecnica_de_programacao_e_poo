@@ -1,0 +1,16 @@
+
+Descritivo dos atributos em cada classe
+
+Classe                  Atributo                Descricao 
+    Conta                   Nome                    Nome da conta. Usado para descrever a conta em si.
+                            Valor                   Valor da conta.
+                            dataVencimento          Data de vencimento da conta.
+                            dataPagamento           Data do pagamento efetivo da conta.
+    
+    Categoria               Nome                    Nome da categoria.
+                            Tipo                    Tipo da categoria, pode ser crédito ou débito.
+    
+    TipoPagamento           Nome                    Nome da modalidade de pagamento. Exemplo: dinheiro, cheque, cartão, depósito.
+
+    Caixa                   Nome                    Nome do caixa.
+                            Saldo                   Valor disponível no caixa.

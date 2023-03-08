@@ -1,0 +1,9 @@
+
+Tipos de dados utilizados nos atributos
+
+Nome                   Descrição
+    Int                 Tipo numérico inteiro com sinal de negativo.
+    Double              Tipo numérico real com sinal de negativo.
+    Bool                Tipo lógico. Armazena verdadeiro (true) ou falso (false).
+    String              Tipo texto. Armazena uma cadeia de caracteres.
+    DateTime            Tipo data e hora.
