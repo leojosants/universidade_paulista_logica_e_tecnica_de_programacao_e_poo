@@ -33,7 +33,7 @@ namespace ExemploControleFinanceiro
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("\n-- Programa Finalizado --\n");
         }
     }
 
