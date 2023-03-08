@@ -17,6 +17,13 @@ namespace ExemploControleFinanceiro
             this.dataDePagamento = "";
             this.dataDePagamento = "";
         }
+
+        // Método construtor - sobrecarga
+        public Conta(string fNome, double fValor)
+        {
+            this.nome = fNome;
+            this.valor = fValor;
+        }
     }
 
     class Categoria
@@ -31,6 +38,13 @@ namespace ExemploControleFinanceiro
             this.nome = "";
             this.tipo = "";
         }
+
+        // Método construtor - sobrecarga
+        public Categoria(string fNome, string fTipo)
+        {
+            this.nome = fNome;
+            this.tipo = fTipo;
+        }
     }
 
     class TipoDePagamento
@@ -42,6 +56,12 @@ namespace ExemploControleFinanceiro
         public TipoDePagamento()
         {
             this.nome = "";
+        }
+
+        // Método construtor
+        public TipoDePagamento(string fNome)
+        {
+            this.nome = fNome;
         }
     }
 
@@ -56,6 +76,13 @@ namespace ExemploControleFinanceiro
         {
             this.nome = "";
             this.saldo = 0;
+        }
+
+        // Método construtor - sobrecarga
+        public Caixa(string fNome, double fSaldo)
+        {
+            this.nome = fNome;
+            this.saldo = fSaldo;
         }
     }
 
