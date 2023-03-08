@@ -1,5 +1,5 @@
 ﻿
-namespace ExemploModificadorSTATIC
+namespace ExemploMODIFICADORSTATIC
 {
     public class Exemplo
     {

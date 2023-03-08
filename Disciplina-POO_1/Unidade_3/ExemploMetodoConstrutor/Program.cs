@@ -1,5 +1,5 @@
 ﻿
-namespace ExemploMetodoConstrutor
+namespace ExemploMETODOCONSTRUTOR
 {
 
     class Gente

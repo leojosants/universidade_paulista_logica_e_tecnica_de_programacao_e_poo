@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploMetodoConstrutor\\ExemploMetodoConstrutor.csproj": {}
+    "c:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploMETODOCONSTRUTOR\\ExemploMetodoConstrutor.csproj": {}
   },
   "projects": {
-    "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploMetodoConstrutor\\ExemploMetodoConstrutor.csproj": {
+    "c:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploMETODOCONSTRUTOR\\ExemploMetodoConstrutor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploMetodoConstrutor\\ExemploMetodoConstrutor.csproj",
+        "projectUniqueName": "c:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploMETODOCONSTRUTOR\\ExemploMetodoConstrutor.csproj",
         "projectName": "ExemploMetodoConstrutor",
-        "projectPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploMetodoConstrutor\\ExemploMetodoConstrutor.csproj",
+        "projectPath": "c:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploMETODOCONSTRUTOR\\ExemploMetodoConstrutor.csproj",
         "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
-        "outputPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploMetodoConstrutor\\obj\\",
+        "outputPath": "c:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploMETODOCONSTRUTOR\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config"

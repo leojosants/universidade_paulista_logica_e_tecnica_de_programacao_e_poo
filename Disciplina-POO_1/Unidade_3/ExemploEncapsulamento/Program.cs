@@ -1,5 +1,5 @@
 ﻿
-namespace ExemploEncapsulamento
+namespace ExemploENCAPSULAMENTO
 {
     class Conta
     {
