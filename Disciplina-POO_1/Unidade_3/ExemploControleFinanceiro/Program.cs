@@ -4,10 +4,10 @@ namespace ExemploControleFinanceiro
     class Conta
     {
         // Atributos
-        public String nome;
+        public string nome;
         public double valor;
-        public String dataDeVencimento;
-        public String dataDePagamento;
+        public string dataDeVencimento;
+        public string dataDePagamento;
 
         // Método construtor
         public Conta()
@@ -23,6 +23,21 @@ namespace ExemploControleFinanceiro
         {
             this.nome = fNome;
             this.valor = fValor;
+        }
+
+        public double RetornarSaldo()
+        {
+            return this.valor;
+        }
+
+        public String RetornarNome()
+        {
+            return this.nome;
+        }
+
+        public void DefineSaldo(double valor)
+        {
+            this.valor = valor;
         }
     }
 

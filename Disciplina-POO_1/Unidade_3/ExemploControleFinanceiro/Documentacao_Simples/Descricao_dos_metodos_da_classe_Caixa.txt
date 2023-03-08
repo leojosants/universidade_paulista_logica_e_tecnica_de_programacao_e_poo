@@ -1,0 +1,7 @@
+
+Descrição dos métodos da classe Caixa
+
+Nome                Parâmetros                          Retorno                  Descrição
+    RetornaSaldo        Nenhum                              O saldo do caixa.       Retorna o valor atual do caixa
+    RetornaNome         Nenhum                              O nome do caixa.        Retorna o nome do caixa
+    DefineSaldo         Valor a ser armazenado no caixa     O saldo do caixa.       Retorna o saldo atual do caixa
