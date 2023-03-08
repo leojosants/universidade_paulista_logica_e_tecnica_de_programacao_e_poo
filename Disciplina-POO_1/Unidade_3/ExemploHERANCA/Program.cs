@@ -7,13 +7,19 @@ namespace ExemploHERANCA
         // Construtor
         public Pai()
         {
-            Console.WriteLine("Construtor pai");
+            Console.WriteLine("Construtor Pai");
+        }
+
+        // Sobrecarga
+        public Pai(string nome)
+        {
+            Console.WriteLine("Sou o Construtor com parâmetros da classe Pai " + nome);
         }
 
         // Método
         public void papi(string nome)
         {
-            Console.WriteLine("Superclasse pai, " + nome);
+            Console.WriteLine("Superclasse Pai, " + nome);
         }
     }
     // Fim class Pai
@@ -24,7 +30,13 @@ namespace ExemploHERANCA
         // Construtor
         public Filho()
         {
-            Console.WriteLine("Construtor filho");
+            Console.WriteLine("Construtor Filho");
+        }
+
+        // Sobrecarga
+        public Filho(string nome)
+            : base(nome)
+        {
         }
 
         // Método
@@ -42,8 +54,7 @@ namespace ExemploHERANCA
         {
             Console.WriteLine("");
 
-            Filho f = new Filho();
-            f.papi("do Junior");
+            Filho f = new Filho("do Junior");
 
             Console.WriteLine("\n -- Fim do Programa -- \n");
         }
