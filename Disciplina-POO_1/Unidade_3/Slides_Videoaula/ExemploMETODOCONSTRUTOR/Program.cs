@@ -5,17 +5,42 @@ namespace ExemploMETODOCONSTRUTOR
     // Início class Data
     class Data
     {
-        // Atributos
+        // Atributo get e set - dia
         public int dia;
+        public int GetDia() { return dia; }
+        public void SetDia(int dia)
+        {
+            if (dia > 0 && dia <= 31)
+            {
+                this.dia = dia;
+            }
+        }
+
+        // Atributo get e set - mes
         public int mes;
+        public int GetMes() { return mes; }
+        public void SetMes(int mes)
+        {
+            if (mes > 0 && mes <= 12)
+            {
+                this.mes = mes;
+            }
+        }
+
+        // Atributo get e set - ano
         public int ano;
+        public int GetAno() { return ano; }
+        public void SetAno(int ano)
+        {
+            this.ano = ano;
+        }
 
         // Construtor
         public Data(int dia, int mes, int ano)
         {
-            this.dia = dia;
-            this.mes = mes;
-            this.ano = ano;
+            SetDia(dia);
+            SetMes(mes);
+            SetAno(ano);
         }
     }
     // Fim class Data
