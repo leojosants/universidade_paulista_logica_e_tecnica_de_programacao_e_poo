@@ -1,6 +1,7 @@
-﻿
+﻿// Início namespace ExemploControleFinanceiro
 namespace ExemploControleFinanceiro
 {
+    // Início class Conta
     class Conta
     {
         // Atributo, get e set (nome)
@@ -17,9 +18,13 @@ namespace ExemploControleFinanceiro
             }
         }
 
+        // Atributos
         public double valor;
         public String dataDeVencimento;
         public String dataDePagamento;
+        public Categoria categoriaDaConta;
+        public TipoDePagamento tipoDePagamentoDaConta;
+        public Caixa caixaDaConta;
 
         // Método construtor
         public Conta()
@@ -28,6 +33,9 @@ namespace ExemploControleFinanceiro
             this.valor = 0;
             this.dataDePagamento = "";
             this.dataDePagamento = "";
+            categoriaDaConta = new Categoria();
+            tipoDePagamentoDaConta = new TipoDePagamento();
+            caixaDaConta = new Caixa();
         }
 
         // Método construtor - sobrecarga
@@ -36,6 +44,9 @@ namespace ExemploControleFinanceiro
             // Comandos de iniciação
             this.nome = fNome;
             this.valor = fValor;
+            categoriaDaConta = new Categoria();
+            tipoDePagamentoDaConta = new TipoDePagamento();
+            caixaDaConta = new Caixa();
         }
 
         public double RetornarSaldo()
@@ -54,7 +65,9 @@ namespace ExemploControleFinanceiro
             return this.RetornarSaldo();
         }
     }
+    // Fim class Conta
 
+    // Início class Categoria
     class Categoria
     {
         // Atributo, get e set (nome)
@@ -92,8 +105,11 @@ namespace ExemploControleFinanceiro
             this.nome = fNome;
             this.tipo = fTipo;
         }
-    }
 
+    }
+    // Fim class Categoria
+
+    // Início class TipoDePagamento
     class TipoDePagamento
     {
         // Atributos
@@ -120,8 +136,11 @@ namespace ExemploControleFinanceiro
         {
             this.nome = nome;
         }
-    }
 
+    }
+    // Fim class TipoDePagamento
+
+    // Início class Caixa
     class Caixa
     {
         // Atributos
@@ -160,14 +179,57 @@ namespace ExemploControleFinanceiro
         {
             this.saldo = saldo;
         }
-    }
 
+    }
+    // Fim class Caixa
+
+    // Início class Program
     class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine();
+            Console.WriteLine("Controle de Contas");
+            Console.WriteLine();
+
+            Conta c1 = new Conta("Conta de luz", 100);
+            c1.categoriaDaConta.SetNome("Despesas da casa");
+            c1.tipoDePagamentoDaConta.SetNome("PAGAMENTO");
+
+            Conta c2 = new Conta("Conta de água", 60);
+            c2.categoriaDaConta.SetNome("Despesas da casa");
+            c2.tipoDePagamentoDaConta.SetNome("PAGAMENTO");
+
+            Conta c3 = new Conta("Salário", 1000);
+            c3.categoriaDaConta.SetNome("Salários");
+            c3.tipoDePagamentoDaConta.SetNome("RECEBIMENTO");
+
+            Console.WriteLine("CONTA \t\t\t CATEGORIA \t\t\t TIPO \t\t\t VALOR");
+
+            Console.WriteLine("{0} \t\t {1} \t\t {2} \t\t {3}",
+                c1.Nome,
+                c1.categoriaDaConta.GetNome(),
+                c1.tipoDePagamentoDaConta.GetNome(),
+                c1.RetornarSaldo()
+            );
+
+            Console.WriteLine("{0} \t\t {1} \t\t {2} \t\t {3}",
+               c2.Nome,
+               c2.categoriaDaConta.GetNome(),
+               c2.tipoDePagamentoDaConta.GetNome(),
+               c2.RetornarSaldo()
+           );
+
+            Console.WriteLine("{0} \t\t {1} \t\t\t {2} \t\t {3}",
+               c3.Nome,
+               c3.categoriaDaConta.GetNome(),
+               c3.tipoDePagamentoDaConta.GetNome(),
+               c3.RetornarSaldo()
+           );
+
             Console.WriteLine("\n-- Programa Finalizado --\n");
         }
     }
-
+    // Fim class Program
 }
+// Fim namespace ExemploControleFinanceiro
