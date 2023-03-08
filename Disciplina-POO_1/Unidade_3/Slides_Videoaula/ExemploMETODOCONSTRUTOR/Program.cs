@@ -13,9 +13,9 @@ namespace ExemploMETODOCONSTRUTOR
         // Construtor
         public Data(int dia, int mes, int ano)
         {
-            dia = dia;
-            mes = mes;
-            ano = ano;
+            this.dia = dia;
+            this.mes = mes;
+            this.ano = ano;
         }
     }
     // Fim class Data
