@@ -9,19 +9,19 @@ namespace ExemploClasseGente
 
         // Método construtor
         public Gente()
-            : this("Jose", 20); // nome = "José"; idade = 20;
+            : this("Jose", 20) // nome = "José"; idade = 20;
         {
         }
 
         // Método construtor - sobrecarga
         public Gente(String nome)
-            : this(nome, 20); // nome = valor; idade = 20;
+            : this(nome, 20) // nome = valor; idade = 20;
         {
         }
 
         // Método construtor - sobrecarga
         public Gente(int valor)
-            : this("José",valor); //nome = "José"; idade = valor;
+            : this("José",valor) //nome = "José"; idade = valor;
         {
         }
 

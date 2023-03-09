@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploControleFinanceiro\\ExemploControleFinanceiro.csproj",
+      "projectUniqueName": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\Livro_Texto\\ExemploControleFinanceiro\\ExemploControleFinanceiro.csproj",
       "projectName": "ExemploControleFinanceiro",
-      "projectPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploControleFinanceiro\\ExemploControleFinanceiro.csproj",
+      "projectPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\Livro_Texto\\ExemploControleFinanceiro\\ExemploControleFinanceiro.csproj",
       "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
-      "outputPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploControleFinanceiro\\obj\\",
+      "outputPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\Livro_Texto\\ExemploControleFinanceiro\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config"

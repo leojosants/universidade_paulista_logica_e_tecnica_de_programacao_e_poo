@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploClasseCarro\\ExemploCarro.csproj": {}
+    "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\Livro_Texto\\ExemploClasseCarro\\ExemploCarro.csproj": {}
   },
   "projects": {
-    "c:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploClasseCarro\\ExemploCarro.csproj": {
+    "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\Livro_Texto\\ExemploClasseCarro\\ExemploCarro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploClasseCarro\\ExemploCarro.csproj",
+        "projectUniqueName": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\Livro_Texto\\ExemploClasseCarro\\ExemploCarro.csproj",
         "projectName": "ExemploCarro",
-        "projectPath": "c:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploClasseCarro\\ExemploCarro.csproj",
+        "projectPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\Livro_Texto\\ExemploClasseCarro\\ExemploCarro.csproj",
         "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
-        "outputPath": "c:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploClasseCarro\\obj\\",
+        "outputPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\Livro_Texto\\ExemploClasseCarro\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -25,7 +25,7 @@ namespace Pergunta4
     {
         static void Main(string[] args)
         {
-            Data d = new Data();
+            // Data d = new Data(); //APRESENTA ERRO
 
             Console.WriteLine("\n Pressione ENTER para finalizar o programa!");
             Console.ReadKey();

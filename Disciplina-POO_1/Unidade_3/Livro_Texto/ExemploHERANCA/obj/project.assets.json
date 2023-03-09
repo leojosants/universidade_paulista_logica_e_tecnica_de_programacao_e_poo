@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploHERANCA\\ExemploHERANCA.csproj",
+      "projectUniqueName": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\Livro_Texto\\ExemploHERANCA\\ExemploHERANCA.csproj",
       "projectName": "ExemploHERANCA",
-      "projectPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploHERANCA\\ExemploHERANCA.csproj",
+      "projectPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\Livro_Texto\\ExemploHERANCA\\ExemploHERANCA.csproj",
       "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
-      "outputPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploHERANCA\\obj\\",
+      "outputPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\Livro_Texto\\ExemploHERANCA\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config"

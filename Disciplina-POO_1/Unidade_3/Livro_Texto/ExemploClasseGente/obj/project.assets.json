@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploClasseGente\\ExemploClasseGente.csproj",
+      "projectUniqueName": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\Livro_Texto\\ExemploClasseGente\\ExemploClasseGente.csproj",
       "projectName": "ExemploClasseGente",
-      "projectPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploClasseGente\\ExemploClasseGente.csproj",
+      "projectPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\Livro_Texto\\ExemploClasseGente\\ExemploClasseGente.csproj",
       "packagesPath": "C:\\Users\\Casa\\.nuget\\packages\\",
-      "outputPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\ExemploClasseGente\\obj\\",
+      "outputPath": "C:\\REPOSITORIO_GITHUB_DESKTOP\\Analise_e_Desenvolvimento_de_Sistemas_UNIP\\Disciplina-POO_1\\Unidade_3\\Livro_Texto\\ExemploClasseGente\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Casa\\AppData\\Roaming\\NuGet\\NuGet.Config"
