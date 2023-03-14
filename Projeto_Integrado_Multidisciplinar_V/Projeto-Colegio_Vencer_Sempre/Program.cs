@@ -4,21 +4,22 @@
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("\n == COLÉGIO VENCER SEMPRE ==");
             Console.WriteLine("-- Sistema de controle de equipamentos audiovisuais -- \n");
-
 
             // Delação de variáveis
             string usuario;
             string email;
             string senha;
-            bool termosEPoliticas;
             bool cadastroRealizado = false;
 
-            // Console.WriteLine("Cadastro realizado: {0}", cadastroRealizado);
 
-            // Cadastrando colaboradores
+            // TELA INICIAL
+            // Console.Write("Digite [1] para CADASTRAR OU [2] para ENTRAR:");
+            // string respostaInicial = Console.ReadLine();
+
+
+            // CADASTRO DE COLABORADORES
             Console.WriteLine("SEÇÃO DE CADASTRO DE COLABORADORES");
 
             Console.Write("Informe um USUÁRIO: ");
@@ -46,7 +47,6 @@
                     email = Console.ReadLine();
                 }
             }
-
 
             Console.Write("Informe uma SENHA: ");
             senha = Console.ReadLine();
@@ -80,47 +80,82 @@
             // SEÇÃO DE LOGIN / AUTENTICAÇÃO
             Console.WriteLine("SEÇÃO DE LOGIN / AUTENTICAÇÃO");
 
-            Console.Write("Informe USUÁRIO ou EMAIL: ");
-            string usuarioAutenticacao = Console.ReadLine();
+            Console.Write("Escolha [1] para ENTRAR ou [2] para ESQUECI MINHA SENHA: ");
+            string respostaEsqueceuSenha = Console.ReadLine();
 
-            if (usuarioAutenticacao != usuario && usuarioAutenticacao != email)
+            if (respostaEsqueceuSenha != "1" && respostaEsqueceuSenha != "2")
             {
-                while (usuarioAutenticacao != usuario && usuarioAutenticacao != email)
+                while (respostaEsqueceuSenha != "1" && respostaEsqueceuSenha != "2")
                 {
-                    Console.Write("--> Dado incorreto! \n");
-                    Console.Write("Informe USUÁRIO ou EMAIL: ");
-                    usuarioAutenticacao = Console.ReadLine();
+                    Console.Write("--> Opção inválida! \n");
+                    Console.Write("Escolha [1] para ENTRAR ou [2] para ESQUECI MINHA SENHA: ");
+                    respostaEsqueceuSenha = Console.ReadLine();
                 }
             }
 
-            Console.Write("Informe sua SENHA: ");
-            string senhaAutenticacao = Console.ReadLine();
-
-            if (senhaAutenticacao != senha)
+            if (respostaEsqueceuSenha == "1")
             {
-                while (senhaAutenticacao != senha)
+                Console.WriteLine("--> Login");
+
+                Console.Write("Informe USUÁRIO ou EMAIL: ");
+                string usuarioAutenticacao = Console.ReadLine();
+
+                if (usuarioAutenticacao != usuario && usuarioAutenticacao != email)
                 {
-                    Console.Write("--> Dado incorreto! \n");
-                    Console.Write("Informe sua SENHA: ");
-                    senhaAutenticacao = Console.ReadLine();
+                    while (usuarioAutenticacao != usuario && usuarioAutenticacao != email)
+                    {
+                        Console.Write("--> Dado incorreto! \n");
+                        Console.Write("Informe USUÁRIO ou EMAIL: ");
+                        usuarioAutenticacao = Console.ReadLine();
+                    }
                 }
+
+                Console.Write("Informe sua SENHA: ");
+                string senhaAutenticacao = Console.ReadLine();
+
+                if (senhaAutenticacao != senha)
+                {
+                    while (senhaAutenticacao != senha)
+                    {
+                        Console.Write("--> Dado incorreto! \n");
+                        Console.Write("Informe sua SENHA: ");
+                        senhaAutenticacao = Console.ReadLine();
+                    }
+                }
+
+                Console.WriteLine("--> Acessando perfil do usuário");
+
             }
+            else if (respostaEsqueceuSenha == "2")
+            {
+                Console.WriteLine("--> Recuperação de senha");
+
+                Console.Write("Informe seu email: ");
+                string emailRecuperacao = Console.ReadLine();
+
+                string codigoEnviadoPeloSistema = "1111";
+
+                Console.WriteLine("Enviado código de recuperação para o email {0}", email);
+
+                Console.Write("Insira o código de verificação: ");
+                string usuarioEnviandoCodigo = Console.ReadLine();
+
+                if (usuarioEnviandoCodigo != codigoEnviadoPeloSistema)
+                {
+                    while (usuarioEnviandoCodigo != codigoEnviadoPeloSistema)
+                    {
+                        Console.Write("--> Código incorreto! \n");
+                        Console.Write("Insira o código de verificação corretamente! ");
+                        usuarioEnviandoCodigo = Console.ReadLine();
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("CÓDIGO VÁLIDO, REDIRECIONANDO PARA LOGIN!");
+                }
 
 
-
-            // // Exibindo dados
-            // Console.WriteLine("\nDados informados:");
-            // Console.WriteLine("Nome: {0}", nome);
-            // Console.WriteLine("Professor? {0}", professor);
-            // Console.WriteLine("Coordenador? {0}", coordenador);
-            // Console.WriteLine("Disciplina: {0}", disciplina);
-            // Console.WriteLine("Email: {0}", email);
-            // Console.WriteLine("Telefone: {0}", telefone);
-            // Console.WriteLine("Registro: {0}", registro);
-
-            // Login
-            // Console.WriteLine("SEÇÃO DE LOGIN");
-            // Console.WriteLine("Informe seu USUÁRIO");
+            }
 
             Console.WriteLine("\n-- Pressione QUALQUER TECLA para finalizar programa.");
             Console.ReadKey();
