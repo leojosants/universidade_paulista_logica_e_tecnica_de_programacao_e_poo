@@ -4,163 +4,148 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("\n == COLÉGIO VENCER SEMPRE ==");
-            Console.WriteLine("-- Sistema de controle de equipamentos audiovisuais -- \n");
-
             // Delação de variáveis
-            string usuario;
-            string email;
-            string senha;
-            bool cadastroRealizado = false;
+            bool cadastrado = false;
+            bool logado = false;
+
+            string opcaoInicial;
+            string usuario = "";
+            string email = "";
+            string senha = "";
+            string aceiteTermos;
+            string validandoUsuarioEmail;
+            string validandoUsuarioSenha;
+            string escolhaMenu;
 
 
             // TELA INICIAL
-            // Console.Write("Digite [1] para CADASTRAR OU [2] para ENTRAR:");
-            // string respostaInicial = Console.ReadLine();
+            Console.WriteLine("\nSeja bem vindo(a)");
+            Console.WriteLine("Colégio VENCER SEMPRE");
+            Console.WriteLine("Sistema de reserva de equipamentos audiovisuais\n");
 
 
-            // CADASTRO DE COLABORADORES
-            Console.WriteLine("SEÇÃO DE CADASTRO DE COLABORADORES");
+            // CADASTRANDO
+            Console.WriteLine("-<- CADASTRO ->-");
 
-            Console.Write("Informe um USUÁRIO: ");
-            usuario = Console.ReadLine();
-
-            if (usuario == "")
+            Console.Write("Informe seu usuário(*): ");
+            do
             {
-                while (usuario == "")
+                usuario = Console.ReadLine();
+
+                if (usuario == "")
                 {
-                    Console.Write("--> O campo obrigatório! \n");
-                    Console.Write("Informe um USUÁRIO: ");
-                    usuario = Console.ReadLine();
+                    Console.WriteLine("--> Campo obrigatório!");
+                    Console.Write("Informe seu usuário(*): ");
                 }
-            }
 
-            Console.Write("Informe um EMAIL: ");
-            email = Console.ReadLine();
+            } while (usuario == "");
 
-            if (email == "")
+            Console.Write("Informe seu email(*): ");
+            do
             {
-                while (email == "")
+                email = Console.ReadLine();
+
+                if (email == "")
                 {
-                    Console.Write("--> O campo obrigatório! \n");
-                    Console.Write("Informe um EMAIL: ");
-                    email = Console.ReadLine();
+                    Console.WriteLine("--> Campo obrigatório!");
+                    Console.Write("Informe seu email(*): ");
                 }
-            }
 
-            Console.Write("Informe uma SENHA: ");
-            senha = Console.ReadLine();
+            } while (email == "");
 
-            if (senha == "")
+            Console.Write("Informe sua senha(*): ");
+            do
             {
-                while (senha == "")
+                senha = Console.ReadLine();
+
+                if (senha == "")
                 {
-                    Console.Write("--> O campo obrigatório! \n");
-                    Console.Write("Informe uma SENHA: ");
-                    senha = Console.ReadLine();
+                    Console.WriteLine("--> Campo obrigatório!");
+                    Console.Write("Informe sua senha(*): ");
                 }
-            }
 
-            Console.Write("Aceita os termos e políticas de privacidade? [S/N] ");
-            string resposta = Console.ReadLine();
+            } while (senha == "");
 
-            if (resposta != "N" || resposta != "n")
+            Console.Write("Digite 'S' para aceitar os termos e políticas de privacidade(*): ");
+            do
             {
-                while (resposta == "N" || resposta == "n")
+                aceiteTermos = Console.ReadLine().ToUpper();
+
+                if (aceiteTermos == "" || aceiteTermos != "S")
                 {
-                    Console.Write("--> O campo obrigatório! \n");
-                    Console.Write("Aceita os termos e políticas de privacidade [S/N]? ");
-                    resposta = Console.ReadLine();
+                    Console.WriteLine("--> Campo obrigatório, informe somente 'S'");
+                    Console.Write("Digite 'S' para aceitar os termos e políticas de privacidade(*): ");
                 }
-            }
 
-            Console.WriteLine("CADASTRO REALIZADO COM SUCESSO! \n");
+            } while (aceiteTermos == "" || aceiteTermos != "S");
+
+            Console.WriteLine("Usuário '{0}' cadastrado com sucesso, redirecionando para validação de login", usuario);
+            cadastrado = true;
 
 
-            // SEÇÃO DE LOGIN / AUTENTICAÇÃO
-            Console.WriteLine("SEÇÃO DE LOGIN / AUTENTICAÇÃO");
-
-            Console.Write("Escolha [1] para ENTRAR ou [2] para ESQUECI MINHA SENHA: ");
-            string respostaEsqueceuSenha = Console.ReadLine();
-
-            if (respostaEsqueceuSenha != "1" && respostaEsqueceuSenha != "2")
+            // ENTRAR NO APP
+            if (cadastrado == true)
             {
-                while (respostaEsqueceuSenha != "1" && respostaEsqueceuSenha != "2")
+                Console.WriteLine("\n-<- ENTRAR ->-");
+
+                // Validando se usuário já possui cadastro
+                do
                 {
-                    Console.Write("--> Opção inválida! \n");
-                    Console.Write("Escolha [1] para ENTRAR ou [2] para ESQUECI MINHA SENHA: ");
-                    respostaEsqueceuSenha = Console.ReadLine();
-                }
-            }
+                    Console.Write("Informe seu usuário ou email: ");
+                    validandoUsuarioEmail = Console.ReadLine();
 
-            if (respostaEsqueceuSenha == "1")
-            {
-                Console.WriteLine("--> Login");
+                    Console.Write("Informe sua senha: ");
+                    validandoUsuarioSenha = Console.ReadLine();
 
-                Console.Write("Informe USUÁRIO ou EMAIL: ");
-                string usuarioAutenticacao = Console.ReadLine();
+                } while ((validandoUsuarioEmail != usuario || validandoUsuarioEmail != email) && validandoUsuarioSenha == senha);
 
-                if (usuarioAutenticacao != usuario && usuarioAutenticacao != email)
-                {
-                    while (usuarioAutenticacao != usuario && usuarioAutenticacao != email)
-                    {
-                        Console.Write("--> Dado incorreto! \n");
-                        Console.Write("Informe USUÁRIO ou EMAIL: ");
-                        usuarioAutenticacao = Console.ReadLine();
-                    }
-                }
-
-                Console.Write("Informe sua SENHA: ");
-                string senhaAutenticacao = Console.ReadLine();
-
-                if (senhaAutenticacao != senha)
-                {
-                    while (senhaAutenticacao != senha)
-                    {
-                        Console.Write("--> Dado incorreto! \n");
-                        Console.Write("Informe sua SENHA: ");
-                        senhaAutenticacao = Console.ReadLine();
-                    }
-                }
-
-                Console.WriteLine("--> Acessando perfil do usuário");
-
-            }
-            else if (respostaEsqueceuSenha == "2")
-            {
-                Console.WriteLine("--> Recuperação de senha");
-
-                Console.Write("Informe seu email: ");
-                string emailRecuperacao = Console.ReadLine();
-
-                string codigoEnviadoPeloSistema = "1111";
-
-                Console.WriteLine("Enviado código de recuperação para o email {0}", email);
-
-                Console.Write("Insira o código de verificação: ");
-                string usuarioEnviandoCodigo = Console.ReadLine();
-
-                if (usuarioEnviandoCodigo != codigoEnviadoPeloSistema)
-                {
-                    while (usuarioEnviandoCodigo != codigoEnviadoPeloSistema)
-                    {
-                        Console.Write("--> Código incorreto! \n");
-                        Console.Write("Insira o código de verificação corretamente! ");
-                        usuarioEnviandoCodigo = Console.ReadLine();
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("CÓDIGO VÁLIDO, REDIRECIONANDO PARA LOGIN!");
-                }
+                Console.WriteLine("Usuário logado, redirecionando para perfil do usuário!");
+                logado = true;
 
 
             }
 
-            Console.WriteLine("\n-- Pressione QUALQUER TECLA para finalizar programa.");
-            Console.ReadKey();
-            Console.WriteLine("-- PROGRAMA FINALIZADO! \n");
+
+
+
+
+
+
+
+
+            while (logado)
+            {
+                Console.WriteLine("Logado");
+
+                // PERFIL
+                Console.WriteLine("\n-<- PERFIL ->-");
+                Console.WriteLine("[1] - Foto de perfil");
+                Console.WriteLine("[5] - Sair");
+                Console.Write("Escolha uma opção: ");
+                escolhaMenu = Console.ReadLine();
+
+                switch (escolhaMenu)
+                {
+                    case "1":
+                        Console.WriteLine("1");
+                        // logado = false;
+                        break;
+
+                    case "5":
+                        Console.WriteLine("Não logado");
+                        logado = false;
+                        break;
+                }
+
+            }
+
+
+
+            // Console.WriteLine("\n-- Pressione QUALQUER TECLA para finalizar programa.");
+            // Console.ReadKey();
+            Console.WriteLine("\n -- PROGRAMA FINALIZADO! -- \n");
 
         }
     }
+
 }
