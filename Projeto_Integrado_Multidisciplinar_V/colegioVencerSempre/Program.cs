@@ -174,12 +174,77 @@
             set { listaEquipamentos = value; }
         }
 
-        public List<Equipamento> ListaReservas = new List<Equipamento>();
+        public static List<Equipamento> listaReservas = new List<Equipamento>();
 
         public Reservas(Colaborador colaborador, List<Equipamento> listaEquipamentos)
         {
             this.colaborador = colaborador;
             this.listaEquipamentos = listaEquipamentos;
+        }
+
+        public void ExibirReservas()
+        {
+            Console.WriteLine("\nReservas do usuário '{0}':", Colaborador.Nome);
+            Console.WriteLine("| Total de reservas: {0}", listaReservas.Count());
+
+            for (int i = 0; i < listaReservas.Count(); i++)
+            {
+                Console.Write("| Código:    {0}", listaReservas[i].Codigo);
+                Console.WriteLine("\t|\t Nome:      {0}", listaReservas[i].Nome);
+            }
+        }
+
+        public void ExibirRelaçãoEquipamentos()
+        {
+            Console.WriteLine("--> Relação de Equipamentos exibida pelo usuário '{0}':", Colaborador.Nome);
+
+            foreach (var item in ListaEquipamentos)
+            {
+                Console.Write("| Código:    {0}\t", item.Codigo);
+                Console.Write("|\t Livre:     {0}", item.Livre);
+                Console.WriteLine("\t|\t Nome:      {0}", item.Nome);
+            }
+
+        }
+
+        public void RealizarReserva(Equipamento equipamento)
+        {
+            if (equipamento.Livre == true)
+            {
+                listaReservas.Add(equipamento);
+
+                equipamento.Livre = false;
+
+                Console.WriteLine(" *Usuário '{0}' equipamento '{1}' reservado!", Colaborador.Nome, equipamento.Nome);
+            }
+            else
+            {
+                Console.WriteLine(" *Usuário '{0} equipamento '{1}' indisponível!", Colaborador.Nome, equipamento.Nome);
+            }
+
+            ExibirReservas();
+        }
+
+        public void FinalizarReserva(Equipamento equipamento)
+        {
+            if (listaReservas.Count() == 0)
+            {
+                Console.WriteLine(" *Usuário '{0}' não possui reserva!", Colaborador.Nome);
+            }
+            else if (!listaReservas.Contains(equipamento))
+            {
+                Console.WriteLine(" *Usuário '{0}', o equipamento {1} não consta nas suas reservas ou já foi desocupado!", Colaborador.Nome, equipamento.Nome);
+            }
+            else
+            {
+                listaReservas.Remove(equipamento);
+
+                equipamento.Livre = true;
+
+                Console.WriteLine(" *Usuário '{0}' desocupou o equipamento '{1}!", Colaborador.Nome, equipamento.Nome);
+            }
+
+            ExibirReservas();
         }
 
     }  //  Fim     class Reservas
@@ -210,6 +275,8 @@
 
             Console.WriteLine("\nRelação de Colaboradores:");
             ExibirListaColaboradores(listaColaboradores);
+
+            Console.WriteLine();
 
             Equipamento c001 = new Equipamento();
             c001.Nome = "CABO VGA";
@@ -263,13 +330,11 @@
             listaEquipamentos.Add(c009);
             listaEquipamentos.Add(c010);
 
-            Console.WriteLine("\nRelação de Equipamentos:");
+            Console.WriteLine("Relação de Equipamentos:");
             ExibirListaEquipamentos(listaEquipamentos);
 
             Reservas reservas01 = new Reservas(colaboradorCoordenador, listaEquipamentos);
-
-
-
+            Reservas reservas02 = new Reservas(colaboradorProfessor, listaEquipamentos);
 
         }   //  Fim Main
 
@@ -285,7 +350,7 @@
         {
             foreach (var item in listaEquipamentos)
             {
-                Console.Write("| Código:    {0}\t", item.Codigo);
+                Console.Write(" | Código:    {0}\t", item.Codigo);
                 Console.Write("|\t Livre:     {0}", item.Livre);
                 Console.WriteLine("\t|\t Nome:      {0}", item.Nome);
             }
@@ -298,8 +363,8 @@
             colaboradorProfessor.Sexo = "Masculino";
             colaboradorProfessor.Tipo = "Professor";
             colaboradorProfessor.Telefone = "032999445588";
-            colaboradorProfessor.Nome = "Usuário Professor";
-            colaboradorProfessor.Email = "usuario@professor.com";
+            colaboradorProfessor.Nome = "Leonardo Professor";
+            colaboradorProfessor.Email = "leonardo@professor.com";
         }
 
         static void CriarColaboradorCoordenador(Colaborador colaboradorCoordenador)
@@ -309,8 +374,8 @@
             colaboradorCoordenador.Sexo = "Masculino";
             colaboradorCoordenador.Tipo = "Coordenaddor";
             colaboradorCoordenador.Telefone = "032944556412";
-            colaboradorCoordenador.Nome = "Usuário Coordenador";
-            colaboradorCoordenador.Email = "usuario@coordenador.com";
+            colaboradorCoordenador.Nome = "Leonardo Coordenador";
+            colaboradorCoordenador.Email = "leonardo@coordenador.com";
         }
 
         static void ExibirTitulo()
