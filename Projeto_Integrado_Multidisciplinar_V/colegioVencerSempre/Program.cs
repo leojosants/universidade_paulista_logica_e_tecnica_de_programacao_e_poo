@@ -46,45 +46,6 @@
 
     }   //  Fim class Pessoa
 
-    class Equipamento
-    {
-        private string nome = "";
-        public string Nome
-        {
-            get { return nome; }
-            set { nome = value; }
-        }
-
-        private string codigo = "";
-        public string Codigo
-        {
-            get { return codigo; }
-            set { codigo = value; }
-        }
-
-        private bool livre;
-        public bool Livre
-        {
-            get { return livre; }
-            set { livre = value; }
-        }
-
-        public Equipamento()
-        {
-            this.nome = "";
-            this.codigo = "";
-            this.livre = true;
-        }
-
-        public Equipamento(string nome, string codigo)
-        {
-            this.nome = nome;
-            this.codigo = codigo;
-            this.livre = true;
-        }
-
-    }   //  Fim class Equipamento
-
 
     class Colaborador : Pessoa
     {
@@ -157,6 +118,73 @@
     }   //  Fim class Colaborador
 
 
+    class Equipamento
+    {
+        private string nome = "";
+        public string Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+
+        private string codigo = "";
+        public string Codigo
+        {
+            get { return codigo; }
+            set { codigo = value; }
+        }
+
+        protected bool livre;
+        private bool Livre
+        {
+            get { return livre; }
+            set { livre = value; }
+        }
+
+        public Equipamento()
+        {
+            this.nome = "";
+            this.codigo = "";
+            this.livre = true;
+        }
+
+        public Equipamento(string nome, string codigo)
+        {
+            this.nome = nome;
+            this.codigo = codigo;
+            this.livre = true;
+        }
+
+    }   //  Fim class Equipamento
+
+
+    class Reservas
+    {
+        private Colaborador colaborador;
+        public Colaborador Colaborador
+        {
+            get { return colaborador; }
+            set { colaborador = value; }
+        }
+
+        private List<Equipamento> listaEquipamentos;
+        public List<Equipamento> ListaEquipamentos
+        {
+            get { return listaEquipamentos; }
+            set { listaEquipamentos = value; }
+        }
+
+        public List<Equipamento> ListaReservas = new List<Equipamento>();
+
+        public Reservas(Colaborador colaborador, List<Equipamento> listaEquipamentos)
+        {
+            this.colaborador = colaborador;
+            this.listaEquipamentos = listaEquipamentos;
+        }
+
+    }  //  Fim     class Reservas
+
+
     class Program
     {
         static void Main(string[] args)
@@ -192,6 +220,60 @@
             List<Colaborador> listaColaboradores = new List<Colaborador>();
             listaColaboradores.Add(usuarioProfessor);
             listaColaboradores.Add(usuarioCoordenador);
+
+            Equipamento c01 = new Equipamento();
+            c01.Nome = "CABO HDMI";
+            c01.Codigo = "01";
+
+            Equipamento c02 = new Equipamento();
+            c02.Nome = "CABO VGA";
+            c02.Codigo = "02";
+
+            Equipamento c03 = new Equipamento();
+            c03.Nome = "TV COM VCR";
+            c03.Codigo = "03";
+
+            Equipamento c04 = new Equipamento();
+            c04.Nome = "PROJETOR DE SLIDE";
+            c04.Codigo = "04";
+
+            Equipamento c05 = new Equipamento();
+            c05.Nome = "NOTEBOOK";
+            c05.Codigo = "05";
+
+            Equipamento c06 = new Equipamento();
+            c06.Nome = "KIT MULTIMÍDIA";
+            c06.Codigo = "06";
+
+            Equipamento c07 = new Equipamento();
+            c07.Nome = "DATA-SHOW";
+            c07.Codigo = "07";
+
+            Equipamento c08 = new Equipamento();
+            c08.Nome = "SISTEMA DE AUDIO-MICROFONE";
+            c08.Codigo = "08";
+
+            Equipamento c09 = new Equipamento();
+            c09.Nome = "MOUSE USB";
+            c09.Codigo = "09";
+
+            Equipamento c010 = new Equipamento();
+            c010.Nome = "SISTEMA DE AUDIO-MICROFONE";
+            c010.Codigo = "010";
+
+            List<Equipamento> listaEquipamentos = new List<Equipamento>();
+            listaEquipamentos.Add(c01);
+            listaEquipamentos.Add(c02);
+            listaEquipamentos.Add(c03);
+            listaEquipamentos.Add(c04);
+            listaEquipamentos.Add(c05);
+            listaEquipamentos.Add(c06);
+            listaEquipamentos.Add(c07);
+            listaEquipamentos.Add(c08);
+            listaEquipamentos.Add(c09);
+            listaEquipamentos.Add(c010);
+
+
 
         }   //  Fim Main
 
