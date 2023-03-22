@@ -134,8 +134,8 @@
             set { codigo = value; }
         }
 
-        protected bool livre;
-        private bool Livre
+        private bool livre;
+        public bool Livre
         {
             get { return livre; }
             set { livre = value; }
@@ -190,92 +190,133 @@
         static void Main(string[] args)
         {
 
-            Console.WriteLine("\nSISTEMA DE RESERVAS DE EQUIPAMENTOS - COLÉGIO VENCER");
+            ExibirTitulo();
 
-            Colaborador usuarioProfessor = new Colaborador();
-            usuarioProfessor.Idade = "38";
-            usuarioProfessor.Senha = "1234";
-            usuarioProfessor.Sexo = "Masculino";
-            usuarioProfessor.Tipo = "Professor";
-            usuarioProfessor.Telefone = "032999445588";
-            usuarioProfessor.Nome = "Usuário Professor";
-            usuarioProfessor.Email = "usuario@professor.com";
+            Colaborador colaboradorProfessor = new Colaborador();
+            CriarColaboradorProfessor(colaboradorProfessor);
 
-            Console.WriteLine();
-            Console.WriteLine(usuarioProfessor);
-            Console.WriteLine();
+            Console.WriteLine("\nDados do colaborador '{0}':", colaboradorProfessor.Nome);
+            Console.WriteLine(colaboradorProfessor);
 
-            Colaborador usuarioCoordenador = new Colaborador();
-            usuarioCoordenador.Idade = "58";
-            usuarioCoordenador.Senha = "4321";
-            usuarioCoordenador.Sexo = "Masculino";
-            usuarioCoordenador.Tipo = "Coordenaddor";
-            usuarioCoordenador.Telefone = "032944556412";
-            usuarioCoordenador.Nome = "Usuário Coordenador";
-            usuarioCoordenador.Email = "usuario@coordenador.com";
+            Colaborador colaboradorCoordenador = new Colaborador();
+            CriarColaboradorCoordenador(colaboradorCoordenador);
 
-            Console.WriteLine(usuarioCoordenador);
-            Console.WriteLine();
+            Console.WriteLine("\nDados do colaborador '{0}':", colaboradorCoordenador.Nome);
+            Console.WriteLine(colaboradorCoordenador);
 
             List<Colaborador> listaColaboradores = new List<Colaborador>();
-            listaColaboradores.Add(usuarioProfessor);
-            listaColaboradores.Add(usuarioCoordenador);
+            listaColaboradores.Add(colaboradorProfessor);
+            listaColaboradores.Add(colaboradorCoordenador);
 
-            Equipamento c01 = new Equipamento();
-            c01.Nome = "CABO HDMI";
-            c01.Codigo = "01";
+            Console.WriteLine("\nRelação de Colaboradores:");
+            ExibirListaColaboradores(listaColaboradores);
 
-            Equipamento c02 = new Equipamento();
-            c02.Nome = "CABO VGA";
-            c02.Codigo = "02";
+            Equipamento c001 = new Equipamento();
+            c001.Nome = "CABO VGA";
+            c001.Codigo = "001";
 
-            Equipamento c03 = new Equipamento();
-            c03.Nome = "TV COM VCR";
-            c03.Codigo = "03";
+            Equipamento c002 = new Equipamento();
+            c002.Nome = "NOTEBOOK";
+            c002.Codigo = "002";
 
-            Equipamento c04 = new Equipamento();
-            c04.Nome = "PROJETOR DE SLIDE";
-            c04.Codigo = "04";
+            Equipamento c003 = new Equipamento();
+            c003.Nome = "DATA-SHOW";
+            c003.Codigo = "003";
 
-            Equipamento c05 = new Equipamento();
-            c05.Nome = "NOTEBOOK";
-            c05.Codigo = "05";
+            Equipamento c004 = new Equipamento();
+            c004.Nome = "MOUSE USB";
+            c004.Codigo = "004";
 
-            Equipamento c06 = new Equipamento();
-            c06.Nome = "KIT MULTIMÍDIA";
-            c06.Codigo = "06";
+            Equipamento c005 = new Equipamento();
+            c005.Nome = "CABO HDMI";
+            c005.Codigo = "005";
 
-            Equipamento c07 = new Equipamento();
-            c07.Nome = "DATA-SHOW";
-            c07.Codigo = "07";
+            Equipamento c006 = new Equipamento();
+            c006.Nome = "TV COM VCR";
+            c006.Codigo = "006";
 
-            Equipamento c08 = new Equipamento();
-            c08.Nome = "SISTEMA DE AUDIO-MICROFONE";
-            c08.Codigo = "08";
+            Equipamento c007 = new Equipamento();
+            c007.Nome = "MOUSE WIRELLES";
+            c007.Codigo = "007";
 
-            Equipamento c09 = new Equipamento();
-            c09.Nome = "MOUSE USB";
-            c09.Codigo = "09";
+            Equipamento c008 = new Equipamento();
+            c008.Nome = "KIT MULTIMÍDIA";
+            c008.Codigo = "008";
+
+            Equipamento c009 = new Equipamento();
+            c009.Nome = "PROJETOR DE SLIDE"; //17
+            c009.Codigo = "009";
 
             Equipamento c010 = new Equipamento();
             c010.Nome = "SISTEMA DE AUDIO-MICROFONE";
             c010.Codigo = "010";
 
             List<Equipamento> listaEquipamentos = new List<Equipamento>();
-            listaEquipamentos.Add(c01);
-            listaEquipamentos.Add(c02);
-            listaEquipamentos.Add(c03);
-            listaEquipamentos.Add(c04);
-            listaEquipamentos.Add(c05);
-            listaEquipamentos.Add(c06);
-            listaEquipamentos.Add(c07);
-            listaEquipamentos.Add(c08);
-            listaEquipamentos.Add(c09);
+            listaEquipamentos.Add(c001);
+            listaEquipamentos.Add(c002);
+            listaEquipamentos.Add(c003);
+            listaEquipamentos.Add(c004);
+            listaEquipamentos.Add(c005);
+            listaEquipamentos.Add(c006);
+            listaEquipamentos.Add(c007);
+            listaEquipamentos.Add(c008);
+            listaEquipamentos.Add(c009);
             listaEquipamentos.Add(c010);
+
+            Console.WriteLine("\nRelação de Equipamentos:");
+            ExibirListaEquipamentos(listaEquipamentos);
+
+            Reservas reservas01 = new Reservas(colaboradorCoordenador, listaEquipamentos);
+
 
 
 
         }   //  Fim Main
+
+        static void ExibirListaColaboradores(List<Colaborador> listaColaboradores)
+        {
+            foreach (var item in listaColaboradores)
+            {
+                Console.WriteLine(" - {0}", item.Nome);
+            }
+        }
+
+        static void ExibirListaEquipamentos(List<Equipamento> listaEquipamentos)
+        {
+            foreach (var item in listaEquipamentos)
+            {
+                Console.Write("| Código:    {0}\t", item.Codigo);
+                Console.Write("|\t Livre:     {0}", item.Livre);
+                Console.WriteLine("\t|\t Nome:      {0}", item.Nome);
+            }
+        }
+
+        static void CriarColaboradorProfessor(Colaborador colaboradorProfessor)
+        {
+            colaboradorProfessor.Idade = "38";
+            colaboradorProfessor.Senha = "1234";
+            colaboradorProfessor.Sexo = "Masculino";
+            colaboradorProfessor.Tipo = "Professor";
+            colaboradorProfessor.Telefone = "032999445588";
+            colaboradorProfessor.Nome = "Usuário Professor";
+            colaboradorProfessor.Email = "usuario@professor.com";
+        }
+
+        static void CriarColaboradorCoordenador(Colaborador colaboradorCoordenador)
+        {
+            colaboradorCoordenador.Idade = "58";
+            colaboradorCoordenador.Senha = "4321";
+            colaboradorCoordenador.Sexo = "Masculino";
+            colaboradorCoordenador.Tipo = "Coordenaddor";
+            colaboradorCoordenador.Telefone = "032944556412";
+            colaboradorCoordenador.Nome = "Usuário Coordenador";
+            colaboradorCoordenador.Email = "usuario@coordenador.com";
+        }
+
+        static void ExibirTitulo()
+        {
+            Console.WriteLine("\nSISTEMA DE RESERVAS DE EQUIPAMENTOS - COLÉGIO VENCER");
+        }
 
     }   //  Fim class Program
 
