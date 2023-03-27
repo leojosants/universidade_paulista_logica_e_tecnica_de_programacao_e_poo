@@ -109,25 +109,40 @@
             set { codigo = value; }
         }
 
-        private bool livre;
-        public bool Livre
+        private int dia;
+        public int Dia
         {
-            get { return livre; }
-            set { livre = value; }
+            get { return dia; }
+            set { dia = value; }
+        }
+
+        private int mes;
+        public int Mes
+        {
+            get { return mes; }
+            set { mes = value; }
+        }
+
+        private int ano;
+        public int Ano
+        {
+            get { return ano; }
+            set { ano = value; }
         }
 
         public Equipamento()
         {
             this.nome = "";
             this.codigo = "";
-            this.livre = true;
         }
 
         public Equipamento(string nome, string codigo)
         {
             this.nome = nome;
             this.codigo = codigo;
-            this.livre = true;
+            this.dia = 00;
+            this.mes = 00;
+            this.ano = 00;
         }
 
     }   //  Fim class Equipamento
