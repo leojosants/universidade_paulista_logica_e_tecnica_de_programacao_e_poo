@@ -14,14 +14,14 @@
             this.nome = "";
         }
 
-        public Pessoa(string nome, string idade, string sexo)
+        public Pessoa(string nome)
         {
             this.nome = nome;
         }
 
         public override string ToString()
         {
-            return " Nome:     " + Nome
+            return " Nome:     " + Nome;
         }
 
     }   //  Fim class Pessoa
@@ -36,13 +36,6 @@
         {
             get { return email; }
             set { email = value; }
-        }
-
-        private string telefone = "";
-        public string Telefone
-        {
-            get { return telefone; }
-            set { telefone = value; }
         }
 
         private string senha = "";
@@ -68,7 +61,6 @@
 
         public Colaborador()
         {
-            this.telefone = "";
             this.email = "";
             this.senha = "";
             this.tipo = "";
@@ -78,11 +70,15 @@
         public Colaborador(string nome, string email, string senha, string tipo)
             : base(nome)
         {
-            this.telefone = telefone;
             this.email = email;
             this.senha = senha;
             this.tipo = tipo;
             this.registro = numeroAleatorio.Next(100, 500);
+        }
+
+        public string RecuperarSenha(string novaSenha)
+        {
+            return this.Senha = novaSenha;
         }
 
         public override string ToString()
@@ -91,7 +87,6 @@
                 + "\n Tipo:     " + this.Tipo
                 + "\n Email:    " + this.Email
                 + "\n Senha:    " + this.Senha
-                + "\n Telefone: " + this.Telefone
                 + "\n Registro: " + this.Registro;
         }
 
