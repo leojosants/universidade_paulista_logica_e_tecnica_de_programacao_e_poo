@@ -164,7 +164,12 @@
             set { listaEquipamentos = value; }
         }
 
-        public static List<Equipamento> listaReservas = new List<Equipamento>();
+        private static List<Equipamento> listaMinhasReservas = new List<Equipamento>();
+        public List<Equipamento> ListaMinhasReservas
+        {
+            get { return listaMinhasReservas; }
+            set { listaMinhasReservas = value; }
+        }
 
         public Reservas(Colaborador colaborador, List<Equipamento> listaEquipamentos)
         {
@@ -175,23 +180,28 @@
         public void ExibirReservas()
         {
             Console.WriteLine("\nReservas do usuário '{0}':", Colaborador.Nome);
-            Console.WriteLine("| Total de reservas: {0}", listaReservas.Count());
+            Console.WriteLine("| Total de reservas: {0}", listaMinhasReservas.Count());
 
-            for (int i = 0; i < listaReservas.Count(); i++)
+            for (int i = 0; i < listaMinhasReservas.Count(); i++)
             {
-                Console.Write("| Código:    {0}", listaReservas[i].Codigo);
-                Console.WriteLine("\t|\t Nome:      {0}", listaReservas[i].Nome);
+                Console.Write("| Código:    {0}", listaMinhasReservas[i].Codigo);
+                Console.Write("\t|\t Nome:      {0}", listaMinhasReservas[i].Nome);
+                Console.WriteLine("\t|\tData para reserva: {0}/{1}/{2}", listaMinhasReservas[i].Dia, listaMinhasReservas[i].Mes, listaMinhasReservas[i].Ano);
             }
         }
 
         public void ExibirRelaçãoEquipamentos()
         {
-            Console.WriteLine("--> Relação de Equipamentos exibida pelo usuário '{0}':", Colaborador.Nome);
+            Console.WriteLine("--> Relação de Equipamentos:");
 
-            foreach (var item in ListaEquipamentos)
+            if (listaEquipamentos.Count() == 0)
             {
-                Console.Write("| Código:    {0}\t", item.Codigo);
-                Console.Write("|\t Livre:     {0}", item.Livre);
+                Console.WriteLine(" *Nenhum equipamento disponível para reserva!");
+            }
+
+            foreach (var item in listaEquipamentos)
+            {
+                Console.Write("| Código:    {0}", item.Codigo);
                 Console.WriteLine("\t|\t Nome:      {0}", item.Nome);
             }
 
@@ -199,43 +209,30 @@
 
         public void RealizarReserva(Equipamento equipamento)
         {
-            if (equipamento.Livre == true)
-            {
-                listaReservas.Add(equipamento);
-                listaEquipamentos.Remove(equipamento);
+            listaMinhasReservas.Add(equipamento);
+            listaEquipamentos.Remove(equipamento);
 
-                equipamento.Livre = false;
+            Console.WriteLine("\n *O usuário '{0}' RESERVOU o equipamento '{1}' para o dia: '{2}/{3}/{4}'!\n", Colaborador.Nome, equipamento.Nome, equipamento.Dia, equipamento.Mes, equipamento.Ano);
 
-                Console.WriteLine(" *Usuário '{0}' equipamento '{1}' reservado!", Colaborador.Nome, equipamento.Nome);
-            }
-            else
-            {
-                Console.WriteLine(" *Usuário '{0}' equipamento '{1}' indisponível!", Colaborador.Nome, equipamento.Nome);
-            }
-
-            ExibirReservas();
+            ExibirRelaçãoEquipamentos();
         }
 
         public void FinalizarReserva(Equipamento equipamento)
         {
-            if (listaReservas.Count() == 0)
+            if (listaMinhasReservas.Count() == 0)
             {
-                Console.WriteLine(" *Usuário '{0}' não possui reserva!", Colaborador.Nome);
-            }
-            else if (!listaReservas.Contains(equipamento))
-            {
-                Console.WriteLine(" *Usuário '{0}', o equipamento {1} não consta nas suas reservas ou já foi desocupado!", Colaborador.Nome, equipamento.Nome);
+                Console.WriteLine(" *Usuário '{0}' não possui reserva(s!\n", Colaborador.Nome);
             }
             else
             {
-                listaReservas.Remove(equipamento);
+                listaMinhasReservas.Remove(equipamento);
 
-                equipamento.Livre = true;
+                Console.WriteLine(" *Usuário '{0}' desocupou o equipamento '{1}!\n", Colaborador.Nome, equipamento.Nome);
 
-                Console.WriteLine(" *Usuário '{0}' desocupou o equipamento '{1}!", Colaborador.Nome, equipamento.Nome);
+                ListaEquipamentos.Add(equipamento);
             }
 
-            ExibirReservas();
+            ExibirRelaçãoEquipamentos();
         }
 
     }  //  Fim     class Reservas
