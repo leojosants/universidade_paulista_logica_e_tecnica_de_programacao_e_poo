@@ -9,39 +9,19 @@
             set { nome = value; }
         }
 
-        private string sexo = "";
-        public string Sexo
-        {
-            get { return sexo; }
-            set { sexo = value; }
-        }
-
-        private string idade;
-        public string Idade
-        {
-            get { return idade; }
-            set { idade = value; }
-        }
-
         public Pessoa()
         {
             this.nome = "";
-            this.idade = "";
-            this.sexo = "";
         }
 
         public Pessoa(string nome, string idade, string sexo)
         {
             this.nome = nome;
-            this.idade = idade;
-            this.sexo = sexo;
         }
 
         public override string ToString()
         {
             return " Nome:     " + Nome
-                + "\n Sexo:     " + Sexo
-                + "\n Idade:    " + Idade;
         }
 
     }   //  Fim class Pessoa
@@ -95,8 +75,8 @@
             this.registro = numeroAleatorio.Next(100, 500);
         }
 
-        public Colaborador(string nome, string idade, string sexo, string telefone, string email, string senha, string tipo)
-            : base(nome, idade, sexo)
+        public Colaborador(string nome, string email, string senha, string tipo)
+            : base(nome)
         {
             this.telefone = telefone;
             this.email = email;
@@ -212,6 +192,7 @@
             if (equipamento.Livre == true)
             {
                 listaReservas.Add(equipamento);
+                listaEquipamentos.Remove(equipamento);
 
                 equipamento.Livre = false;
 
@@ -219,7 +200,7 @@
             }
             else
             {
-                Console.WriteLine(" *Usuário '{0} equipamento '{1}' indisponível!", Colaborador.Nome, equipamento.Nome);
+                Console.WriteLine(" *Usuário '{0}' equipamento '{1}' indisponível!", Colaborador.Nome, equipamento.Nome);
             }
 
             ExibirReservas();
@@ -273,8 +254,8 @@
             listaColaboradores.Add(colaboradorProfessor);
             listaColaboradores.Add(colaboradorCoordenador);
 
-            Console.WriteLine("\nRelação de Colaboradores:");
-            ExibirListaColaboradores(listaColaboradores);
+            // Console.WriteLine("\nRelação de Colaboradores:");
+            // ExibirListaColaboradores(listaColaboradores);
 
             Console.WriteLine();
 
@@ -330,13 +311,36 @@
             listaEquipamentos.Add(c009);
             listaEquipamentos.Add(c010);
 
-            Console.WriteLine("Relação de Equipamentos:");
-            ExibirListaEquipamentos(listaEquipamentos);
+            // Console.WriteLine("Relação de Equipamentos:");
+            // ExibirListaEquipamentos(listaEquipamentos);
 
             Reservas reservas01 = new Reservas(colaboradorCoordenador, listaEquipamentos);
             Reservas reservas02 = new Reservas(colaboradorProfessor, listaEquipamentos);
 
+            reservas01.ExibirReservas();
+            Console.WriteLine();
+
+            reservas02.ExibirReservas();
+            Console.WriteLine();
+
+            reservas01.FinalizarReserva(c003);
+            Console.WriteLine();
+
+            reservas02.FinalizarReserva(c003);
+            Console.WriteLine();
+
+            reservas01.RealizarReserva(c004);
+            Console.WriteLine();
+
+
+            reservas01.ExibirRelaçãoEquipamentos();
+            Console.WriteLine();
+
+
+
         }   //  Fim Main
+
+
 
         static void ExibirListaColaboradores(List<Colaborador> listaColaboradores)
         {
