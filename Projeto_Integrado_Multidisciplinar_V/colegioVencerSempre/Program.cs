@@ -9,14 +9,32 @@
             set { nome = value; }
         }
 
+        private int idade;
+        public int Idade
+        {
+            get { return idade; }
+            set { idade = value; }
+        }
+
+        private string sexo = "";
+        public string Sexo
+        {
+            get { return sexo; }
+            set { sexo = value; }
+        }
+
         public Pessoa()
         {
             this.nome = "";
+            this.idade = 0;
+            this.sexo = "";
         }
 
-        public Pessoa(string nome)
+        public Pessoa(string nome, int idade, string sexo)
         {
             this.nome = nome;
+            this.idade = idade;
+            this.sexo = sexo;
         }
 
         public override string ToString()
@@ -67,8 +85,8 @@
             this.registro = numeroAleatorio.Next(100, 500);
         }
 
-        public Colaborador(string nome, string email, string senha, string tipo)
-            : base(nome)
+        public Colaborador(string nome, int idade, string sexo, string email, string senha, string tipo)
+            : base(nome, idade, sexo)
         {
             this.email = email;
             this.senha = senha;
@@ -254,7 +272,10 @@
             string? nome = "";
             string? senha = "";
             string? email = "";
+            string sexo = "";
+            string tipo = "";
             string? testeSenhaLogin;
+            int idade = 0;
             int testeRegistroLogin;
             int diaReserva;
             int mesReserva;
@@ -430,7 +451,7 @@
 
                                 Console.WriteLine("\nCADASTRO DE USUÁRIOS");
 
-                                CriarColaborador(colaborador, listaColaboradores, cadastrado, nome, senha, email);
+                                CriarColaborador(colaborador, listaColaboradores, cadastrado, nome, idade, sexo, senha, email, tipo);
 
                                 do
                                 {
@@ -543,7 +564,7 @@
             }
         }
 
-        static void CriarColaborador(Colaborador colaborador, List<Colaborador> listaColaboradores, bool cadastrado, string? nome, string? senha, string? email)
+        static void CriarColaborador(Colaborador colaborador, List<Colaborador> listaColaboradores, bool cadastrado, string? nome, int idade, string sexo, string? senha, string? email, string tipo)
         {
             do
             {
@@ -552,6 +573,22 @@
                 colaborador.Nome = nome;
 
             } while (nome == "");
+
+            do
+            {
+                Console.Write(" - Idade: ");
+                idade = Convert.ToInt32(Console.ReadLine());
+                colaborador.Idade = idade;
+
+            } while (idade == 0);
+
+            do
+            {
+                Console.Write(" - Sexo: ");
+                sexo = Console.ReadLine();
+                colaborador.Sexo = sexo;
+
+            } while (sexo == "");
 
             do
             {
@@ -568,6 +605,14 @@
                 colaborador.Email = email;
 
             } while (email == "");
+
+            do
+            {
+                Console.Write(" - Tipo: ");
+                tipo = Console.ReadLine();
+                colaborador.Tipo = tipo;
+
+            } while (tipo == "");
 
             listaColaboradores.Add(colaborador);
             cadastrado = true;
