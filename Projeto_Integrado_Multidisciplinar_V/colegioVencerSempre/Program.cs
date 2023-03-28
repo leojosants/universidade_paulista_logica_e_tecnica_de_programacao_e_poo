@@ -243,68 +243,50 @@
         static void Main(string[] args)
         {
 
-            ExibirTitulo();
+            string? respostaFinalizarReserva = "";
+            string? infoEmailRecuperacao = "";
+            string? respostaCadastro = "";
+            string? respostaInicial = "";
+            string? opcaoReservas = "";
+            string? codigoRealizarReserva = "";
+            string? codigoFinalizarReserva = "";
+            string? novaSenha = "";
+            string? nome = "";
+            string? senha = "";
+            string? email = "";
+            string? testeSenhaLogin;
+            int testeRegistroLogin;
+            int diaReserva;
+            int mesReserva;
+            int anoReserva;
+            int enviandoCodigoRecuperacaoSenha = 0;
+            bool cadastrado = false;
 
-            Colaborador colaboradorProfessor = new Colaborador();
-            CriarColaboradorProfessor(colaboradorProfessor);
+            Random criarNumeroAleatorio = new Random();
+            int codigoRecuperacaoSenhaRecebido = criarNumeroAleatorio.Next(1, 100);
 
-            Console.WriteLine("\nDados do colaborador '{0}':", colaboradorProfessor.Nome);
-            Console.WriteLine(colaboradorProfessor);
-
-            Colaborador colaboradorCoordenador = new Colaborador();
-            CriarColaboradorCoordenador(colaboradorCoordenador);
-
-            Console.WriteLine("\nDados do colaborador '{0}':", colaboradorCoordenador.Nome);
-            Console.WriteLine(colaboradorCoordenador);
-
+            Colaborador colaborador = new Colaborador();
             List<Colaborador> listaColaboradores = new List<Colaborador>();
-            listaColaboradores.Add(colaboradorProfessor);
-            listaColaboradores.Add(colaboradorCoordenador);
-
-            // Console.WriteLine("\nRelação de Colaboradores:");
-            // ExibirListaColaboradores(listaColaboradores);
-
-            Console.WriteLine();
 
             Equipamento c001 = new Equipamento();
             c001.Nome = "CABO VGA";
-            c001.Codigo = "001";
+            c001.Codigo = "c001";
 
             Equipamento c002 = new Equipamento();
             c002.Nome = "NOTEBOOK";
-            c002.Codigo = "002";
+            c002.Codigo = "c002";
 
             Equipamento c003 = new Equipamento();
             c003.Nome = "DATA-SHOW";
-            c003.Codigo = "003";
+            c003.Codigo = "c003";
 
             Equipamento c004 = new Equipamento();
             c004.Nome = "MOUSE USB";
-            c004.Codigo = "004";
+            c004.Codigo = "c004";
 
             Equipamento c005 = new Equipamento();
             c005.Nome = "CABO HDMI";
-            c005.Codigo = "005";
-
-            Equipamento c006 = new Equipamento();
-            c006.Nome = "TV COM VCR";
-            c006.Codigo = "006";
-
-            Equipamento c007 = new Equipamento();
-            c007.Nome = "MOUSE WIRELLES";
-            c007.Codigo = "007";
-
-            Equipamento c008 = new Equipamento();
-            c008.Nome = "KIT MULTIMÍDIA";
-            c008.Codigo = "008";
-
-            Equipamento c009 = new Equipamento();
-            c009.Nome = "PROJETOR DE SLIDE"; //17
-            c009.Codigo = "009";
-
-            Equipamento c010 = new Equipamento();
-            c010.Nome = "SISTEMA DE AUDIO-MICROFONE";
-            c010.Codigo = "010";
+            c005.Codigo = "c005";
 
             List<Equipamento> listaEquipamentos = new List<Equipamento>();
             listaEquipamentos.Add(c001);
@@ -312,49 +294,244 @@
             listaEquipamentos.Add(c003);
             listaEquipamentos.Add(c004);
             listaEquipamentos.Add(c005);
-            listaEquipamentos.Add(c006);
-            listaEquipamentos.Add(c007);
-            listaEquipamentos.Add(c008);
-            listaEquipamentos.Add(c009);
-            listaEquipamentos.Add(c010);
 
-            // Console.WriteLine("Relação de Equipamentos:");
-            // ExibirListaEquipamentos(listaEquipamentos);
+            do
+            {
+                ExibirMenuInicial();    //
 
-            Reservas reservas01 = new Reservas(colaboradorCoordenador, listaEquipamentos);
-            Reservas reservas02 = new Reservas(colaboradorProfessor, listaEquipamentos);
+                Console.Write("Escolha uma opção: ");
+                respostaInicial = Console.ReadLine();
+                try
+                {
+                    switch (respostaInicial)
+                    {
+                        case "1":   //  ENTRAR
+                            Console.Write(" \nInforme o número de registro do usuário: ");
+                            testeRegistroLogin = Convert.ToInt32(Console.ReadLine());
 
-            reservas01.ExibirReservas();
-            Console.WriteLine();
+                            if (colaborador.Registro == testeRegistroLogin)
+                            {
+                                do
+                                {
+                                    Console.Write("Informe a senha  do usuário: ");
+                                    testeSenhaLogin = Console.ReadLine();
 
-            reservas02.ExibirReservas();
-            Console.WriteLine();
+                                } while (testeSenhaLogin == "");
 
-            reservas01.FinalizarReserva(c003);
-            Console.WriteLine();
+                                if (colaborador.Senha != testeSenhaLogin)
+                                {
+                                    Console.WriteLine(" *Senha inválida!");
+                                }
+                                else if (colaborador.Senha == testeSenhaLogin)
+                                {
+                                    Console.WriteLine(" *Senha válida, direcionando para login...");
 
-            reservas02.FinalizarReserva(c003);
-            Console.WriteLine();
+                                    Reservas reservas = new Reservas(colaborador, listaEquipamentos);
 
-            reservas01.RealizarReserva(c004);
-            Console.WriteLine();
+                                    Console.WriteLine("\nÁREA DE RESERVAS");
 
+                                    do
+                                    {
+                                        ExibirMenuAreaReservas();
 
-            reservas01.ExibirRelaçãoEquipamentos();
-            Console.WriteLine();
+                                        Console.Write("Escolha uma opção: ");
+                                        opcaoReservas = Console.ReadLine();
+
+                                        switch (opcaoReservas)
+                                        {
+                                            case "1":
+
+                                                Console.WriteLine("\nFAZER RESERVA");
+
+                                                reservas.ExibirRelaçãoEquipamentos();
+
+                                                if (reservas.ListaEquipamentos.Count() == 0)
+                                                {
+                                                    Console.WriteLine("\n *Todos equipamentos estão ocupados!");
+                                                }
+                                                else
+                                                {
+                                                    Console.Write("\n Informe a dia da reserva [xx]: ");
+                                                    diaReserva = Convert.ToInt32(Console.ReadLine());
+
+                                                    for (int i = 0; i < reservas.ListaEquipamentos.Count(); i++)
+                                                    {
+                                                        reservas.ListaEquipamentos[i].Dia = diaReserva;
+                                                    }
+
+                                                    Console.Write(" Informe o mês da reserva [xx]: ");
+                                                    mesReserva = Convert.ToInt32(Console.ReadLine());
+
+                                                    for (int i = 0; i < reservas.ListaEquipamentos.Count(); i++)
+                                                    {
+                                                        reservas.ListaEquipamentos[i].Mes = mesReserva;
+                                                    }
+
+                                                    Console.Write(" Informe o ano da reserva [xx]: ");
+                                                    anoReserva = Convert.ToInt32(Console.ReadLine());
+
+                                                    for (int i = 0; i < reservas.ListaEquipamentos.Count(); i++)
+                                                    {
+                                                        reservas.ListaEquipamentos[i].Ano = anoReserva;
+                                                    }
+
+                                                    Console.Write("\n Informe o código do equipamento: ");
+                                                    codigoRealizarReserva = Console.ReadLine();
+
+                                                    for (int i = 0; i < reservas.ListaEquipamentos.Count(); i++)
+                                                    {
+                                                        if (reservas.ListaEquipamentos[i].Codigo == codigoRealizarReserva)
+                                                        {
+                                                            reservas.RealizarReserva(reservas.ListaEquipamentos[i]);
+                                                        }
+                                                    }
+                                                }
+                                                break;
+
+                                            case "2":
+                                                reservas.ExibirReservas();
+
+                                                if (reservas.ListaMinhasReservas.Count() != 0)
+                                                {
+                                                    do
+                                                    {
+                                                        Console.Write("\n Deseja finalizar alguma reserva [S/N]? ");
+                                                        respostaFinalizarReserva = Console.ReadLine().ToUpper();
+
+                                                    } while (respostaFinalizarReserva == "");
+
+                                                    if (respostaFinalizarReserva == "S")
+                                                    {
+                                                        Console.Write("\n Informe o código do equipamento: ");
+                                                        codigoFinalizarReserva = Console.ReadLine();
+
+                                                        for (int i = 0; i < reservas.ListaMinhasReservas.Count(); i++)
+                                                        {
+                                                            if (reservas.ListaMinhasReservas[i].Codigo == codigoFinalizarReserva)
+                                                            {
+                                                                reservas.FinalizarReserva(reservas.ListaMinhasReservas[i]);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                break;
+                                        }
+
+                                    } while (opcaoReservas != "3");
+
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine(" *Resgistro inexistente, favor realizar cadastrado!");
+
+                                // CADASTRO
+
+                                Console.WriteLine("\nCADASTRO DE USUÁRIOS");
+
+                                CriarColaborador(colaborador, listaColaboradores, cadastrado, nome, senha, email);
+
+                                do
+                                {
+                                    Console.Write("\n *Confirmar cadastro [S/N]: ");
+                                    respostaCadastro = Console.ReadLine().ToUpper();
+
+                                } while (respostaCadastro == "");
+
+                                if (respostaCadastro == "N")
+                                {
+                                    cadastrado = false;
+                                    Console.WriteLine(" *Cadastro cancelado!");
+                                }
+                                else if (respostaCadastro == "S")
+                                {
+                                    listaColaboradores.Add(colaborador);
+
+                                    Console.WriteLine("\n *Realizando cadastro, aguarde...");
+                                    Console.WriteLine("\n *Cadastro realizado, registro --> {0}", colaborador.Registro);
+
+                                    cadastrado = true;
+                                }
+                            }
+
+                            break;
+
+                        case "2":   //  ESQUECEU A SENHA
+                            RecuperarSenha(infoEmailRecuperacao, colaborador, enviandoCodigoRecuperacaoSenha, codigoRecuperacaoSenhaRecebido, novaSenha, cadastrado);
+                            break;
+                    }
+                }
+                catch (System.Exception)
+                {
+                    Console.WriteLine(" *O campo obrigatoriamente deve conter somente dígitos numéricos!");
+                }
+
+            } while (respostaInicial != "3");
 
 
 
         }   //  Fim Main
 
-
-
-        static void ExibirListaColaboradores(List<Colaborador> listaColaboradores)
+        static void RecuperarSenha(string? infoEmailRecuperacao, Colaborador colaborador, int enviandoCodigoRecuperacaoSenha, int codigoRecuperacaoSenhaRecebido, string? novaSenha, bool cadastrado)
         {
-            foreach (var item in listaColaboradores)
+            Console.WriteLine("\n RECUPERAÇÃO DE SENHA");
+
+            if (cadastrado == true)
             {
-                Console.WriteLine(" - {0}", item.Nome);
+                do
+                {
+                    Console.Write("\n Informe o email: ");
+                    infoEmailRecuperacao = Console.ReadLine();
+
+                } while (infoEmailRecuperacao == "");
+
+                if (colaborador.Email == infoEmailRecuperacao)
+                {
+                    Console.WriteLine("\n *Email válido, código de recuperação enviado para o email '{0}'!", colaborador.Email);
+
+                    Console.WriteLine("\n *Código de recuperação de senha: {0}", codigoRecuperacaoSenhaRecebido);
+
+                    Console.Write("\n Informe o código de recuperação: ");
+                    enviandoCodigoRecuperacaoSenha = Convert.ToInt32(Console.ReadLine());
+
+                    if (enviandoCodigoRecuperacaoSenha == codigoRecuperacaoSenhaRecebido)
+                    {
+                        Console.WriteLine("\n *Código de recuperação válido, recuperação realizada...");
+
+                        Console.Write("\n Insira uma nova senha: ");
+                        novaSenha = Console.ReadLine();
+
+                        colaborador.RecuperarSenha(novaSenha);
+
+                        Console.WriteLine("\n Nova senha cadastrada!");
+                        Console.WriteLine("\n Direcionando para Login...");
+                    }
+                    else
+                    {
+                        Console.WriteLine(" *Código de recuperação inválido, recuperação não realizada!");
+                    }
+                }
+                else { Console.WriteLine(" *Email inválido!"); }
             }
+        }
+
+        static void ExibirMenuAreaReservas()
+        {
+            Console.WriteLine("\nM E N U");
+            Console.WriteLine("[1] - FAZER RESERVA");
+            Console.WriteLine("[2] - MINHAS RESERVAS");
+            Console.WriteLine("[3] - SAIR");
+        }
+
+        static void ExibirMenuLogin()
+        {
+            Console.WriteLine("\nLOGIN");
+
+            Console.WriteLine("\nM E N U");
+            Console.WriteLine("[1] - ENTRAR");
+            Console.WriteLine("[2] - ESQUECEU A SENHA");
+            Console.WriteLine("[3] - SAIR");
         }
 
         static void ExibirListaEquipamentos(List<Equipamento> listaEquipamentos)
@@ -362,36 +539,49 @@
             foreach (var item in listaEquipamentos)
             {
                 Console.Write(" | Código:    {0}\t", item.Codigo);
-                Console.Write("|\t Livre:     {0}", item.Livre);
                 Console.WriteLine("\t|\t Nome:      {0}", item.Nome);
             }
         }
 
-        static void CriarColaboradorProfessor(Colaborador colaboradorProfessor)
+        static void CriarColaborador(Colaborador colaborador, List<Colaborador> listaColaboradores, bool cadastrado, string? nome, string? senha, string? email)
         {
-            colaboradorProfessor.Idade = "38";
-            colaboradorProfessor.Senha = "1234";
-            colaboradorProfessor.Sexo = "Masculino";
-            colaboradorProfessor.Tipo = "Professor";
-            colaboradorProfessor.Telefone = "032999445588";
-            colaboradorProfessor.Nome = "Leonardo Professor";
-            colaboradorProfessor.Email = "leonardo@professor.com";
+            do
+            {
+                Console.Write(" - Nome: ");
+                nome = Console.ReadLine();
+                colaborador.Nome = nome;
+
+            } while (nome == "");
+
+            do
+            {
+                Console.Write(" - Senha: ");
+                senha = Console.ReadLine();
+                colaborador.Senha = senha;
+
+            } while (senha == "");
+
+            do
+            {
+                Console.Write(" - Email: ");
+                email = Console.ReadLine();
+                colaborador.Email = email;
+
+            } while (email == "");
+
+            listaColaboradores.Add(colaborador);
+            cadastrado = true;
         }
 
-        static void CriarColaboradorCoordenador(Colaborador colaboradorCoordenador)
+        static void ExibirMenuInicial()
         {
-            colaboradorCoordenador.Idade = "58";
-            colaboradorCoordenador.Senha = "4321";
-            colaboradorCoordenador.Sexo = "Masculino";
-            colaboradorCoordenador.Tipo = "Coordenaddor";
-            colaboradorCoordenador.Telefone = "032944556412";
-            colaboradorCoordenador.Nome = "Leonardo Coordenador";
-            colaboradorCoordenador.Email = "leonardo@coordenador.com";
-        }
+            Console.WriteLine("\nCOLÉGIO VENCER");
+            Console.WriteLine("Sistema de Reservas de Equipamentos Audiovisuais");
 
-        static void ExibirTitulo()
-        {
-            Console.WriteLine("\nSISTEMA DE RESERVAS DE EQUIPAMENTOS - COLÉGIO VENCER");
+            Console.WriteLine("\n M E N U");
+            Console.WriteLine(" [1] - ENTRAR");
+            Console.WriteLine(" [2] - ESQUECEU A SENHA");
+            Console.WriteLine(" [3] - SAIR");
         }
 
     }   //  Fim class Program
